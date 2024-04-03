@@ -65,7 +65,7 @@ numButton.forEach(element => {
         } else {
             currentValue += element.textContent;
             displayValueBig.textContent = currentValue;
-            displayValueSmall.textContent += element.textContent;;
+            displayValueSmall.textContent += element.textContent;
         }
     });
 });
@@ -93,7 +93,7 @@ addButton.addEventListener("click", () => {
         currentValue = valueTwo;
         operation = addition;
     } else {
-        // displayValueSmall.textContent += valueTwo;
+        displayValueSmall.textContent += valueTwo;
         displayValueSmall.textContent += "+";
         operation();
         operation = addition;
@@ -109,12 +109,10 @@ minusButton.addEventListener("click", () => {
     } if (operation === null) {
         operation = subtract;
     } else {
-
-        operation();
-        displayValueSmall.textContent += currentValue;
         displayValueSmall.textContent += "-";
-
+        operation();
         operation = subtract;
+        displayValueBig.textContent = valueTwo;
         currentValue = "";
     }
 });
@@ -126,10 +124,10 @@ multiplyButton.addEventListener("click", () => {
     } if (operation === null) {
         operation = multiply;
     } else {
-        displayValueSmall.textContent += valueTwo;
         displayValueSmall.textContent += "×";
         operation();
         operation = multiply;
+        displayValueBig.textContent = valueTwo;
         currentValue = "";
     }
 });
@@ -141,10 +139,10 @@ divideButton.addEventListener("click", () => {
     } if (operation === null) {
         operation = divide;
     } else {
-        displayValueSmall.textContent += valueTwo;
         displayValueSmall.textContent += "÷";
         operation();
         operation = divide;
+        displayValueBig.textContent = valueTwo;
         currentValue = "";
     }
 });
