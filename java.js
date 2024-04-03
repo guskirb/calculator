@@ -3,6 +3,7 @@ const addButton = document.querySelector(".buttons .add");
 const minusButton = document.querySelector(".buttons .minus");
 const divideButton = document.querySelector(".buttons .divide");
 const multiplyButton = document.querySelector(".buttons .multiply");
+const clearButton = document.querySelector(".clear");
 
 let displayValueBig = document.getElementById("bigNum");
 let displayValueSmall = document.getElementById("smallNum");
@@ -32,10 +33,12 @@ function operate(valueOne, valueTwo, operation) {
     operation(valueOne, valueTwo);
 }
 
-function clear(valueOne, valueTwo, operation) {
-    valueOne = "";
+function clear() {
+    currentValue = "";
     valueTwo = "";
     operation = null;
+    displayValueBig.textContent = "0";
+    displayValueSmall.textContent = "";
 }
 
 
@@ -53,4 +56,8 @@ numButton.forEach(element => {
             displayValueBig.textContent = currentValue;
         }
     });
+});
+
+clearButton.addEventListener("click", () => {
+    clear();
 });
