@@ -62,12 +62,15 @@ body {
   font-size: 35px;
   margin-bottom: 0px;
   margin-top: 5px;
+  min-height: 35px;
+  max-height: 35px;
 }
 
 #bigNum {
   font-family: "Digital-7", sans-serif;
   text-align: end;
-  font-size: 70px;
-  margin-top: -10px;
+  font-size: 65px;
+  margin-top: -5px;
   margin-right: 10px;
+  margin-bottom: auto;
 }
