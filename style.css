@@ -104,3 +104,9 @@ body {
   margin-top: auto;
   font-size: 18px;
 }
+
+#operator {
+  background-color: #c9c4b6;
+  color: #2c3639;
+  font-weight: bold;
+}
